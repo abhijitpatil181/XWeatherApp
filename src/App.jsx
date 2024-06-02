@@ -27,6 +27,14 @@ function App() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  useEffect(() => {
+    if (error) {
+      if (confirm(error)) {
+        setError("");
+      }
+    }
+  }, [error]);
+
   const getData = (value) => {
     setLoading(true);
 
@@ -60,21 +68,14 @@ function App() {
   const onSearchClick = () => {
     if (value) {
       getData(value);
+      console.log("hi");
     }
   };
 
-  const handleAlert = () => {
-    setError("");
-  };
+  console.log("error1", error);
 
   return (
     <>
-      {error && alert(error) && (
-        <div className="error-alert">
-          <p>{error}</p>
-          <button onClick={handleAlert}>OK</button>
-        </div>
-      )}
       <div className="search">
         <input
           placeholder="Enter city name"

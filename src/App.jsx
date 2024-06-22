@@ -71,8 +71,6 @@ function App() {
     }
   };
 
-  console.log("error1", error);
-
   return (
     <>
       <div className="search">

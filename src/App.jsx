@@ -78,6 +78,7 @@ function App() {
           placeholder="Enter city name"
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          type="text"
         />
         <button onClick={onSearchClick}>Search</button>
       </div>

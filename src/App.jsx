@@ -53,7 +53,7 @@ function App() {
         setError("");
       })
       .catch((error) => {
-        console.log("error");
+        console.log("error", error);
         setLoading(false);
         setData({
           temperature: "",
@@ -61,14 +61,13 @@ function App() {
           condition: "",
           windSpeed: "",
         });
-        setError("Failed to fetch weather data");
+        // setError("Failed to fetch weather data");
       });
   };
 
   const onSearchClick = () => {
     if (value) {
       getData(value);
-      console.log("hi");
     }
   };
 

@@ -39,7 +39,7 @@ function App() {
     setLoading(true);
 
     fetch(
-      `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${value}&aqi=no`
+      `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${value}&aqi=no`
     )
       .then((response) => response.json())
       .then((data) => {
@@ -61,7 +61,7 @@ function App() {
           condition: "",
           windSpeed: "",
         });
-        // setError("Failed to fetch weather data");
+        setError("Failed to fetch weather data");
       });
   };
 

@@ -85,7 +85,7 @@ function App() {
 
       <div className="weather-cards">
         {loading ? (
-          <p>Loading data…</p>
+          <p>Loading data...</p>
         ) : (
           Object.keys(data).length > 0 &&
           Object.values(data).some((value) => value) &&
